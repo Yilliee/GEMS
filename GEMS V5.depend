@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1597574020 source:e:\zarish laptop\semester 2\programming fundamentals\programming assignments\gems v5\main.cpp
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+
