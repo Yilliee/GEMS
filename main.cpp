@@ -25,10 +25,11 @@ int main()
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} },
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} } };
 
-    char c, c1, c2, c3, c4;
-    char ch='y';
+    char c, c1, c2, c4;
+    //char ch='y';
+    string subtitle;
 
-    int flag=0;
+    int flagp0=0;int flagp1=0;int flagp2=0;int flagp3=0;int flagp4=0;
     int flag1=0;
     int flag22=0;
     int flag2=0;
@@ -50,7 +51,7 @@ int main()
     cout << "3 - APPLIED PHYSICS" << endl<<endl;
     cout << "4 - PHISIOLOGY " << endl<<endl;
     cout << "5 - CALCULUS" << endl<<endl;
-    cout << "6 - SHUTDOWN "<< endl<<endl;
+    cout << "0 - SHUTDOWN "<< endl<<endl;
     cin>>c;
 
     system("cls");
@@ -59,30 +60,35 @@ int main()
         {
            cout <<endl<<endl<<endl<< "          PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
            p=0;
+           subtitle="PROGRAMMING FUNDAMENTALS";
         }
 
         else if (c == '2')
             {
                 cout <<endl<<endl<<endl<< "          CIRCUIT ANALYSIS " << endl<<endl<<endl<<endl;
                 p=1;
+                subtitle="CIRCUIT ANALYSIS";
             }
 
         else if (c == '3')
             {
                 cout <<endl<<endl<<endl<< "          APPLIED PHYSICS " << endl<<endl<<endl<<endl;
                 p=2;
+                subtitle="APPLIED PHYSICS";
             }
         else if (c == '4')
             {
                 cout <<endl<<endl<<endl<< "          PHISIOLOGY " << endl<<endl<<endl<<endl;
                 p=3;
+                subtitle="PHISIOLOGY";
             }
         else if (c == '5')
             {
                 cout <<endl<<endl<<endl<< "          CALCULUS " << endl<<endl<<endl<<endl;
                 p=4;
+                subtitle="CALCULUS";
             }
-        else if (c == '6')
+        else if (c == '0')
             exit(1);
 
 
@@ -98,12 +104,12 @@ int main()
                   char ch2='n';
                do
                {
-                //system("cls");
-                //cout <<endl<<endl<<endl<< "          PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
+                system("cls");
+                cout <<endl<<endl<<endl<< "          "<<subtitle<<endl<<endl<<endl<<endl;
                 cout << "1 - Assessments " << endl<<endl;
                 cout << "2 - Grading" << endl<<endl;
                 cout << "3 - Calculate " << endl<<endl;
-                cout << "4 - Exit" << endl<<endl;
+                cout << "0 - Exit" << endl<<endl;
                 cin>>c1;
 
                 switch(c1)
@@ -115,13 +121,13 @@ int main()
                             {
 
                             system("cls");
-                            cout <<endl<<endl<<endl<< "     A S S E S S M E N T S - PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
+                            cout <<endl<<endl<<endl<< "     A S S E S S M E N T S - " <<subtitle<< endl<<endl<<endl<<endl;
                             cout << "1 - Attendance/Class Participation" << endl<<endl;
                             cout << "2 - Quiz 1" << endl<<endl;
                             cout << "3 - Quiz 2" << endl<<endl;
                             cout << "4 - Mid Term" << endl<<endl;
                             cout << "5 - Final Term" << endl<<endl;
-                            cout << "6 - Exit " << endl<<endl;
+                            cout << "0 - Exit " << endl<<endl;
                             cin>>c2;
 
                             switch(c2)
@@ -133,12 +139,12 @@ int main()
                                             {
 
                                             system("cls");
-                                            cout <<endl<<endl<<endl<< "     A T T E N D A N C E Marks - PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
+                                            cout <<endl<<endl<<endl<< "     A T T E N D A N C E Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                             cout << "ATTENDANCE MARKS" << endl<<endl;
                                             cout << "1 - MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE MARKS" << endl;
                                             cout << "3 - DISPLAY ATTENDANCE MARKS" << endl;
-                                            cout << "4 - EXIT" << endl<<endl;
+                                            cout << "0 - EXIT" << endl<<endl;
                                             //cout << "5 - CONTINUE" << endl<<endl;
                                             cin>>c4;
                                             switch(c4)
@@ -146,22 +152,34 @@ int main()
                                                 case '1':
                                                     {
                                                         system("cls");
-                                                        if(flag==0)
+                                                        if((flagp0==0 && p==0)|| (flagp1==0 && p==1) || (flagp2==0 && p==2) || (flagp3==0 && p==3) ||(flagp4==0 && p==4))
                                                         {
-                                                            cout << "MARKS: Attendance/Class Participation" << endl<<endl;
-                                                            //flag=1;
+                                                            cout <<endl<<endl<<"     Attendance/Class Participation Marks - " <<subtitle<< endl<<endl;
+                                                            if (p==0)
+                                                              flagp0=1;
+                                                            else if (p==1)
+                                                              flagp1=1;
+                                                            else if (p==2)
+                                                              flagp2=1;
+                                                            else if (p==3)
+                                                              flagp3=1;
+                                                            else if (p==4)
+                                                              flagp4=1;
+
+
                                                             for (int j=0;j<size_class;j++)
                                                             {
                                                                 cout<<"Student ID:   "<<classbme[p][j].stu_id<<endl;
                                                                 cout<<"Student Name: "<<classbme[p][j].name<<endl;
-                                                                cout<<endl<<"Marks: ";
+                                                                cout<<endl<<"Attendance Marks: ";
                                                                 cin>>classbme[p][j].Att;
                                                                 cout<<endl;
                                                             }
                                                         }
 
                                                         else
-                                                            cout<<endl<<endl<<"Attendance Marks Already entered: "<<endl<<endl;
+
+cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
 
 
                                                         cout<<"Student ID:   "<<"Student Name: "<<"Marks"<<endl<<endl;
@@ -213,7 +231,7 @@ int main()
                                                         getch();
                                                     }
                                                     break;
-                                                case '4':
+                                                case '0':
                                                     {
                                                         //cout<<endl<<"Exit Attendance: (Y/N): ";
                                                         ch3='Y';
@@ -244,12 +262,12 @@ int main()
                                             {
 
                                             system("cls");
-                                            cout <<endl<<endl<<endl<< "     Q U I Z 1 Marks - PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
+                                            cout <<endl<<endl<<endl<< "     Q U I Z 1 Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                             //cout << "QUIZ MARKS" << endl<<endl;
                                             cout << "1 - QUIZ MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE QUIZ  1 MARKS" << endl;
                                             cout << "3 - DISPLAY QUIZ 1 MARKS" << endl;
-                                            cout << "4 - EXIT" << endl<<endl;
+                                            cout << "0 - EXIT" << endl<<endl;
                                             cin>>c4;
                                             switch(c4)
                                             {
@@ -323,7 +341,7 @@ int main()
                                                         getch();
                                                     }
                                                     break;
-                                                case '4':
+                                                case '0':
                                                     {
                                                         ch3='Y';
 
@@ -352,12 +370,12 @@ int main()
                                             {
 
                                             system("cls");
-                                            cout <<endl<<endl<<endl<< "     Q U I Z 2 Marks - PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
+                                            cout <<endl<<endl<<endl<< "     Q U I Z 2 Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                             //cout << "QUIZ MARKS" << endl<<endl;
                                             cout << "1 - QUIZ 2 MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE QUIZ  2 MARKS" << endl;
                                             cout << "3 - DISPLAY QUIZ 2 MARKS" << endl;
-                                            cout << "4 - EXIT" << endl<<endl;
+                                            cout << "0 - EXIT" << endl<<endl;
                                             cin>>c4;
                                             switch(c4)
                                             {
@@ -432,7 +450,7 @@ int main()
                                                         getch();
                                                     }
                                                     break;
-                                                case '4':
+                                                case '0':
                                                         ch3='Y';
                                                     break;
                                             }
@@ -458,12 +476,12 @@ int main()
                                             {
 
                                             system("cls");
-                                            cout <<endl<<endl<<endl<< "     M I D   T E R M Marks - PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
+                                            cout <<endl<<endl<<endl<< "     M I D   T E R M Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                             //cout << "QUIZ MARKS" << endl<<endl;
                                             cout << "1 - MID TERM MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE MID TERM MARKS" << endl;
                                             cout << "3 - DISPLAY MID TERM MARKS" << endl;
-                                            cout << "4 - EXIT" << endl<<endl;
+                                            cout << "0 - EXIT" << endl<<endl;
                                             cin>>c4;
                                             switch(c4)
                                             {
@@ -538,7 +556,7 @@ int main()
                                                         getch();
                                                     }
                                                     break;
-                                                case '4':
+                                                case '0':
                                                         ch3='Y';
                                                     break;
                                             }
@@ -559,12 +577,12 @@ int main()
                                             {
 
                                             system("cls");
-                                            cout <<endl<<endl<<endl<< "     F I N A L   T E R M Marks - PROGRAMMING FUNDAMENTALS " << endl<<endl<<endl<<endl;
+                                            cout <<endl<<endl<<endl<< "     F I N A L   T E R M Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                             //cout << "QUIZ MARKS" << endl<<endl;
                                             cout << "1 - FINAL TERM MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE FINAL TERM MARKS" << endl;
                                             cout << "3 - DISPLAY FINAL TERM MARKS" << endl;
-                                            cout << "4 - EXIT" << endl<<endl;
+                                            cout << "0 - EXIT" << endl<<endl;
                                             cin>>c4;
                                             switch(c4)
                                             {
@@ -653,7 +671,7 @@ int main()
 
                                     }
                                     break;
-                                case '6':
+                                case '0':
                                         ch3='Y';
                                     break;
                             }
@@ -690,7 +708,7 @@ int main()
                         }
                         break;
 
-                    case '4':
+                    case '0':
                             ch2='Y';
                         break;
                 }
