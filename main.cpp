@@ -13,7 +13,6 @@ struct student{
     float Final;
     float Total;
 };
-//int flag=0;
 const int subj=6;
 const int size_class=3;
 int main()
@@ -26,7 +25,6 @@ int main()
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} } };
 
     char c, c1, c2, c4;
-    //char ch='y';
     string subtitle;
 
     int flagp0=0;int flagp1=0;int flagp2=0;int flagp3=0;int flagp4=0;
@@ -94,13 +92,7 @@ int main()
 
 
 
-    //switch(c)
-    //{
 
-
-      //  case '1':
-
-            //{
                   char ch2='n';
                do
                {
@@ -237,18 +229,9 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
                                                         ch3='Y';
                                                     }
                                                     break;
-                                                /*case '5':
-                                                    {
-                                                        //cout<<endl<<"Continue: (Y/N): ";
-                                                        ch3='n';
-                                                    }
-                                                    break;*/
+
                                             }
 
-
-
-                                            //cout<<endl<<"Exit Attendance: (Y/N): ";
-                                            //cin>>ch3;
                                             }while (ch3=='N' || ch3=='n');
 
                                     }
@@ -256,14 +239,12 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
 
                                 case '2':
                                     {
-                                            //int flag22=0;
                                             char ch3='n';
                                             do
                                             {
 
                                             system("cls");
                                             cout <<endl<<endl<<endl<< "     Q U I Z 1 Marks - " <<subtitle<< endl<<endl<<endl<<endl;
-                                            //cout << "QUIZ MARKS" << endl<<endl;
                                             cout << "1 - QUIZ MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE QUIZ  1 MARKS" << endl;
                                             cout << "3 - DISPLAY QUIZ 1 MARKS" << endl;
@@ -307,7 +288,7 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
                                                         float qmarks;
                                                         cout<<"Enter Student ID: ";
                                                         cin>>student_id;
-                                                        //int flag2=0;
+
                                                         for (int j=0;j<size_class;j++)
                                                         {
                                                             if(classbme[p][j].stu_id==student_id)
@@ -364,14 +345,12 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
 
                                 case '3':
                                     {
-                                            //int flag3=0;
                                             char ch3='n';
                                             do
                                             {
 
                                             system("cls");
                                             cout <<endl<<endl<<endl<< "     Q U I Z 2 Marks - " <<subtitle<< endl<<endl<<endl<<endl;
-                                            //cout << "QUIZ MARKS" << endl<<endl;
                                             cout << "1 - QUIZ 2 MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE QUIZ  2 MARKS" << endl;
                                             cout << "3 - DISPLAY QUIZ 2 MARKS" << endl;
@@ -415,7 +394,7 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
                                                         float qmarks;
                                                         cout<<"Enter Student ID: ";
                                                         cin>>student_id;
-                                                        //int flag4=0;
+
                                                         for (int j=0;j<size_class;j++)
                                                         {
                                                             if(classbme[p][j].stu_id==student_id)
@@ -470,7 +449,6 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
 
                                 case '4':
                                     {
-                                            //int flag6=0;
                                             char ch3='n';
                                             do
                                             {
@@ -521,7 +499,7 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
                                                         float qmarks;
                                                         cout<<"Enter Student ID: ";
                                                         cin>>student_id;
-                                                        //int flag7=0;
+
                                                         for (int j=0;j<size_class;j++)
                                                         {
                                                             if(classbme[p][j].stu_id==student_id)
@@ -571,14 +549,14 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
                                     break;
                                 case '5':
                                     {
-                                            //int flag8=0;
+
                                             char ch3='n';
                                             do
                                             {
 
                                             system("cls");
                                             cout <<endl<<endl<<endl<< "     F I N A L   T E R M Marks - " <<subtitle<< endl<<endl<<endl<<endl;
-                                            //cout << "QUIZ MARKS" << endl<<endl;
+
                                             cout << "1 - FINAL TERM MARKS ENTRY" << endl;
                                             cout << "2 - UPDATE FINAL TERM MARKS" << endl;
                                             cout << "3 - DISPLAY FINAL TERM MARKS" << endl;
@@ -622,7 +600,7 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
                                                         float qmarks;
                                                         cout<<"Enter Student ID: ";
                                                         cin>>student_id;
-                                                        //int flag11=0;
+
                                                         for (int j=0;j<size_class;j++)
                                                         {
                                                             if(classbme[p][j].stu_id==student_id)
@@ -716,16 +694,7 @@ cout<<endl<<endl<<subtitle<<" - Attendance Marks Already entered: "<<endl<<endl;
                 //cin>>ch2;
                 } while (ch2=='N' || ch2=='n');
 
-            //}
-                //break;
-        //case '2': break;
-        //case '3': break;
-        //case '4': break;
-        //case '5': break;
 
-        //case '6': ch1 = 'Y';
-                //break;
-    //}
     //cout<<endl<<"Exit Program (Press Y) - Main Menu (Press N) : (Y/N): ";
     //cin>>ch1;
     } while (ch1=='N' || ch1=='n');
