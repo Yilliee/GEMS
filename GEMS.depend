@@ -1,11 +1,7 @@
 # depslib dependency file v1.0
-1597574020 source:e:\zarish laptop\semester 2\programming fundamentals\programming assignments\gems v5\main.cpp
+1598180145 source:e:\gems\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
-
-1597893656 source:e:\gems\main.cpp
-	<iostream>
-	<stdlib.h>
-	<conio.h>
+	<fstream>
 
