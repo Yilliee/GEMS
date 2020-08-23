@@ -1,0 +1,6 @@
+30bme Kaleem 2 2 0 2 0 6 31bme saleem 2 2 0 2 0 6 31bme waseem 2 2 0 2 0 6 
+30bme Kaleem 0 0 4 5 0 9 31bme saleem 0 0 4 5 0 9 31bme waseem 0 0 4 5 0 9 
+30bme Kaleem 0 0 0 0 0 0 31bme saleem 0 0 0 0 0 0 31bme waseem 0 0 0 0 0 0 
+30bme Kaleem 0 0 0 22 0 0 31bme saleem 0 0 0 22 0 0 31bme waseem 0 0 0 22 0 0 
+30bme Kaleem 0 0 0 0 7 7 31bme saleem 0 0 0 0 7 7 31bme waseem 0 0 0 0 7 7 
+30bme Kaleem 0 0 0 0 0 0 31bme saleem 0 0 0 0 0 0 31bme waseem 0 0 0 0 0 0 
