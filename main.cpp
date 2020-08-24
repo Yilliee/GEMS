@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<conio.h>
 #include <fstream>
-
+#include <iomanip>
 using namespace std;
 struct student{
     string stu_id;
@@ -61,48 +61,17 @@ istream& readDataFromFile(istream& in, student (&classbme)[subj][size_class])
     return in;
 }
 
-//STUDENT REGISTRATION WRITE Function
 
-/*ostream& writeReg(ostream& out, student (&classbme)[subj][size_class])
-{
-    for (int j = 0; j < size_class; ++j)
-    {
-        for (int i = 0; i < subj; ++i)
-        {
-            out << classbme[i][j].stu_id<<" ";
-            out << classbme[i][j].name<<" ";
-        }
-        out<<"\n";
-    }
-    return out;
-}
-
-
-istream& readReg(istream& in, student (&classbme)[subj][size_class])
-{
-    for (int j = 0; j < size_class; ++j)
-    {
-        for (int i = 0; i < subj; ++i)
-        {
-            in >> classbme[i][j].stu_id;
-            in >> classbme[i][j].name;
-        }
-        cout<<endl;
-    }
-    return in;
-}*/
-
-
-
+void dispMarks(student classbme[][size_class], int p, int s_class, int v);
 int main()
 {
-    student classbme [subj][size_class]={ { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} },
+    student classbme [subj][size_class];/*={ { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} },
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} },
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} },
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} },
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} },
                                           { {"2019bme51","Ali",0,0,0,0,0,0},{"2019bme52","Zia",0,0,0,0,0,0}, {"2019bme53","Ben",0,0,0,0,0,0} } };
-
+                                          */
 
 
 
@@ -173,19 +142,61 @@ int flagf0=0, flagf1=0, flagf2=0, flagf3=0, flagf4=0;
 int flag1=0, flag2=0, flag4=0, flag7=0, flag11=0, p;
 
 
+//READ FLAGS
+                fstream readFlags;
+                readFlags.open("Flags.txt", std::ios::in);
+
+                readFlags >> flagatt0;
+                readFlags >> flagatt1;
+                readFlags >> flagatt2;
+                readFlags >> flagatt3;
+                readFlags >> flagatt4;
+                readFlags >> flagq10;
+                readFlags >> flagq11;
+                readFlags >> flagq12;
+                readFlags >> flagq13;
+                readFlags >> flagq14;
+                readFlags >> flagq20;
+                readFlags >> flagq21;
+                readFlags >> flagq22;
+                readFlags >> flagq23;
+                readFlags >> flagq24;
+                readFlags >> flagm0;
+                readFlags >> flagm1;
+                readFlags >> flagm2;
+                readFlags >> flagm3;
+                readFlags >> flagm4;
+                readFlags >> flagf0;
+                readFlags >> flagf1;
+                readFlags >> flagf2;
+                readFlags >> flagf3;
+                readFlags >> flagf4;
+
+                readFlags >> flags_reg;
+
+                readFlags >> flag1;
+                readFlags >> flag2;
+                readFlags >> flag4;
+                readFlags >> flag7;
+                readFlags >> flag11;
+
+                readFlags.close();
+//READ FLAGS
+
+
 char ch5='n';
 do
 {   system("cls");
     cout <<endl<<endl<<endl<< "  G E M S - GRADE EVALUATION MANAGEMENT SYSTEM" << endl<<endl<<endl;
 
-    cout << "1 - COURSE INSTRUCTOR" << endl<<endl;
-    cout << "2 - ADMINISTATOR" << endl<<endl;
+    cout << "1 - ADMINISTATOR" << endl<<endl;
+    cout << "2 - COURSE INSTRUCTOR" << endl<<endl;
     cout << "0 - SHUTDOWN "<< endl<<endl;
     cin>>c5;
 
     switch(c5)
     {
-        case '2':
+        case '1':
             {
                 //system("cls");
                 cout<<endl<<endl<<"         A D M I N I S T R A T O R "<<endl<<endl;
@@ -206,7 +217,6 @@ do
                 do
                 {
                     system("cls");
-                    //cout <<endl<<endl<<endl<< "       G E M S - GRADE EVALUATION MANAGEMENT SYSTEM" << endl<<endl<<endl;
                     cout <<endl<<endl<< "       A D M I N I S T R A T O R - GEMS" << endl<<endl<<endl;
                     cout << "1 - STUDENT REGISTRATION" << endl<<endl;
                     cout << "2 - SUBJECT REGISTRATION" << endl<<endl;
@@ -233,12 +243,6 @@ do
                                         classbme[i][j].stu_id= classbme[0][j].stu_id;
                                         classbme[i][j].name= classbme[0][j].name;
                                     }
-
-
-
-
-
-
                             }
                             break;
 
@@ -275,13 +279,16 @@ do
                                 }
                                 else
                                 {
-                                    cout<<"Subjects Already registered ";
+                                    cout<<endl<<endl<<"Subjects Already registered ";
                                     cout<<endl<<endl<<"Do You want to Register Again(Y/N)? ";
                                     cin>>ch8;
                                     if(ch8=='Y' || ch8=='y')
+                                    {
                                         flags_reg=0;
-                                    cout<<endl<<endl<<"Now you can Register the subjects again. Repeat the process again";
-                                    getch();
+                                        cout<<endl<<endl<<"Now you can Register the subjects again. Repeat the process again";
+                                    }
+
+                                    //getch();
                                 }
 
                             }
@@ -389,13 +396,6 @@ do
                         case '0':
                             {
                                 ch7='Y';
-
-                                /*std::fstream of("BMECLASSDATA.txt", std::ios::out);
-                                if (of.is_open())
-                                {
-                                    writemap(of, classbme);
-                                    of.close();
-                                }*/
                             }
                             break;
                     }
@@ -405,7 +405,7 @@ do
             }
             break;
 
-        case '1':
+        case '2':
             {
                 char ch1='n';
                 do
@@ -417,7 +417,7 @@ do
                     cout << "3 - APPLIED PHYSICS" << endl<<endl;
                     cout << "4 - PHISIOLOGY " << endl<<endl;
                     cout << "5 - CALCULUS" << endl<<endl;
-                    cout << "0 - SHUTDOWN "<< endl<<endl;
+                    cout << "0 - EXIT "<< endl<<endl;
                     cin>>c;
 
                     system("cls");
@@ -470,47 +470,11 @@ do
                         cin>>pass;
                     }
                     else if (c == '0')
-                    {
-                        std::fstream of("BMECLASSDATA.txt", std::ios::out);
 
-                        if (of.is_open())
-                        {
-                            writemap(of, classbme);
-                            of.close();
-                        }
-
-                        //SAVE PASSWORDS
-                        fstream savePass;
-                        savePass.open("Passwords.txt", ios::out); // Open for output
-                        savePass << pass1<<"\n";
-                        savePass << pass2<<"\n";
-                        savePass << pass3<<"\n";
-                        savePass << pass4<<"\n";
-                        savePass << pass5<<"\n";
-                        savePass << admpass<<"\n";
-                        savePass.close();
-                        //SAVE PASSWORDS
-
-                        //SUBJECT NAME SAVING
-                        fstream saveSubj;
-                        saveSubj.open("Subjects.txt", std::ios::out);
-                        saveSubj << sub1<<"\n";
-                        saveSubj << sub2<<"\n";
-                        saveSubj << sub3<<"\n";
-                        saveSubj << sub4<<"\n";
-                        saveSubj << sub5<<"\n";
-                        saveSubj.close();
-                        //SUBJECT NAME SAVING
+                            break;
 
 
-
-                        exit(1);
-
-                    }
-
-
-
-
+                    // Enter in sequence
                     if ((p==0 && pass==pass1) || (p==1 && pass==pass2) || (p==2 && pass==pass3) || (p==3 && pass==pass4) || (p==4 && pass==pass5 ))
                     {
 
@@ -521,7 +485,7 @@ do
                             cout <<endl<<endl<<endl<< "          "<<subtitle<<endl<<endl<<endl<<endl;
                             cout << "1 - Assessments " << endl<<endl;
                             cout << "2 - Grading" << endl<<endl;
-                            cout << "3 - Calculate " << endl<<endl;
+                            //cout << "3 - Calculate " << endl<<endl;
                             cout << "0 - Exit" << endl<<endl;
                             cin>>c1;
 
@@ -529,10 +493,10 @@ do
                             {
                                 case '1':
                                     {
+                                        int v; // used for Assessments (1 for Att. 2 for Q1, 3 for Q2 etc.
                                         char ch3='n';
                                         do
                                         {
-
                                             system("cls");
                                             cout <<endl<<endl<<endl<< "     A S S E S S M E N T S - " <<subtitle<< endl<<endl<<endl<<endl;
                                             cout << "1 - Attendance/Class Participation" << endl<<endl;
@@ -547,10 +511,10 @@ do
                                             {
                                                 case '1':
                                                     {
+                                                        v=1;
                                                         char ch3='n';
                                                         do
                                                         {
-
                                                             system("cls");
                                                             cout <<endl<<endl<<endl<< "     A T T E N D A N C E Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                                             cout << "ATTENDANCE MARKS" << endl<<endl;
@@ -580,7 +544,6 @@ do
                                                                             else if (p==4)
                                                                                 flagatt4=1;
 
-
                                                                             for (int j=0;j<size_class;j++)
                                                                             {
                                                                                 cout<<"Student ID:   "<<classbme[p][j].stu_id<<endl;
@@ -589,8 +552,6 @@ do
                                                                                 cin>>marksatt;
                                                                                 if(marksatt<0 || marksatt>10)
                                                                                 {
-
-
                                                                                     cout<<endl<<endl<<"Total Marks 10 - Please Enter Marks between (0-10)"<<endl<<endl;
                                                                                     j--;
                                                                                     getch();
@@ -602,15 +563,10 @@ do
                                                                                     classbme[p][j].Att=marksatt;
                                                                                     cout<<endl;
                                                                                 }
+                                                                            }
 
-                                                                            }
-                                                                            cout<<"Student ID:   "<<"Student Name: "<<"Marks"<<endl<<endl;
-                                                                            for (int j=0;j<size_class;j++)
-                                                                            {
-                                                                                cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Att;
-                                                                                cout<<endl;
-                                                                            }
-                                                                            getche();
+                                                                            // v=1 for attendance marks
+                                                                            dispMarks(classbme, p, size_class, v);
                                                                         }
 
                                                                         else
@@ -625,7 +581,6 @@ do
                                                                     {
                                                                         float marks;
                                                                         string student_id;
-
 
                                                                         cout<<endl<<"Student ID (e.g., 2019bme51) "<<endl<<endl;
                                                                         cout<<"Enter Student ID: ";
@@ -655,26 +610,19 @@ do
                                                                             cout<<endl<<endl<<"Student Not found. "<<endl<<endl;
                                                                             getch();
                                                                         }
-
                                                                     }
                                                                     break;
                                                                 case '3':
                                                                     {
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Att;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getch();
+                                                                        dispMarks(classbme, p, size_class, v);
                                                                     }
                                                                     break;
+
                                                                 case '0':
                                                                     {
                                                                         ch3='Y';
                                                                     }
                                                                     break;
-
                                                             }
 
                                                         }while (ch3=='N' || ch3=='n');
@@ -684,10 +632,10 @@ do
 
                                                 case '2':
                                                     {
+                                                        v=2;
                                                         char ch3='n';
                                                         do
                                                         {
-
                                                             system("cls");
                                                             cout <<endl<<endl<<endl<< "     Q U I Z 1 Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                                             cout << "1 - QUIZ MARKS ENTRY" << endl;
@@ -716,7 +664,6 @@ do
                                                                             else if (p==4)
                                                                                 flagq14=1;
 
-
                                                                             for (int j=0;j<size_class;j++)
                                                                             {
                                                                                 cout<<"Student ID:   "<<classbme[p][j].stu_id<<endl;
@@ -725,8 +672,6 @@ do
                                                                                 cin>>marksq;
                                                                                 if(marksq<0 || marksq>10)
                                                                                 {
-
-
                                                                                     cout<<endl<<endl<<"Total Marks 10 - Please Enter Marks between (0-10)"<<endl<<endl;
                                                                                     j--;
                                                                                     getch();
@@ -739,6 +684,8 @@ do
                                                                                     cout<<endl;
                                                                                 }
                                                                             }
+
+                                                                            dispMarks(classbme, p, size_class, v);
                                                                         }
 
                                                                         else
@@ -746,15 +693,6 @@ do
                                                                            cout<<endl<<endl<<"QUIZ 1 Marks Already entered. "<<endl<<endl;
                                                                            getch();
                                                                         }
-
-
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"Q1 Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Q1;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getche();
                                                                     }
                                                                     break;
 
@@ -795,13 +733,7 @@ do
 
                                                                 case '3':
                                                                 {
-                                                                    cout<<"Student ID:   "<<"Student Name: "<<"Q1 Marks"<<endl<<endl;
-                                                                    for (int j=0;j<size_class;j++)
-                                                                    {
-                                                                        cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Q1;
-                                                                        cout<<endl;
-                                                                    }
-                                                                    getch();
+                                                                    dispMarks(classbme, p, size_class, v);
                                                                 }
                                                                 break;
 
@@ -818,6 +750,7 @@ do
 
                                                 case '3':
                                                     {
+                                                        v=3;
                                                         char ch3='n';
                                                         do
                                                         {
@@ -868,6 +801,7 @@ do
                                                                                     cout<<endl;
                                                                                 }
                                                                             }
+                                                                            dispMarks(classbme, p, size_class, v);
                                                                         }
 
                                                                         else
@@ -875,15 +809,6 @@ do
                                                                             cout<<endl<<endl<<"QUIZ 2 Marks Already entered. "<<endl<<endl;
                                                                             getch();
                                                                         }
-
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"Q2 Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Q2;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getch();
-
                                                                     }
                                                                     break;
 
@@ -919,18 +844,11 @@ do
                                                                             cout<<endl<<endl<<"Student Not found. "<<endl<<endl;
                                                                             getch();
                                                                         }
-
                                                                     }
                                                                     break;
                                                                 case '3':
                                                                     {
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"Q2 Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Q2;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getch();
+                                                                        dispMarks(classbme, p, size_class, v);
                                                                     }
                                                                     break;
 
@@ -946,10 +864,10 @@ do
 
                                                 case '4':
                                                     {
+                                                        v=4;
                                                         char ch3='n';
                                                         do
                                                         {
-
                                                             system("cls");
                                                             cout <<endl<<endl<<endl<< "     M I D   T E R M Marks - " <<subtitle<< endl<<endl<<endl<<endl;
                                                             cout << "1 - MID TERM MARKS ENTRY" << endl;
@@ -997,6 +915,8 @@ do
                                                                                     cout<<endl;
                                                                                 }
                                                                             }
+
+                                                                            dispMarks(classbme, p, size_class, v);
                                                                         }
 
                                                                         else
@@ -1004,15 +924,6 @@ do
                                                                             cout<<endl<<endl<<"MID TERM Marks Already entered. "<<endl<<endl;
                                                                             getch();
                                                                         }
-
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"MID TERM Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Mid;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getch();
-
                                                                     }
                                                                     break;
 
@@ -1054,13 +965,7 @@ do
 
                                                                 case '3':
                                                                     {
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"MID TERM Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Mid;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getch();
+                                                                        dispMarks(classbme, p, size_class, v);
                                                                     }
                                                                     break;
 
@@ -1076,6 +981,7 @@ do
 
                                                 case '5':
                                                     {
+                                                        v=5;
                                                         char ch3='n';
                                                         do
                                                         {
@@ -1126,20 +1032,14 @@ do
                                                                                     cout<<endl;
                                                                                 }
                                                                             }
+
+                                                                            dispMarks(classbme, p, size_class, v);
                                                                         }
                                                                         else
                                                                         {
                                                                             cout<<endl<<endl<<"FINAL TERM Marks Already entered. "<<endl<<endl;
                                                                             getch();
                                                                         }
-
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"FINAL TERM Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Final;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getch();
                                                                     }
                                                                     break;
 
@@ -1182,13 +1082,7 @@ do
 
                                                                 case '3':
                                                                     {
-                                                                        cout<<"Student ID:   "<<"Student Name: "<<"FINAL TERM Marks"<<endl<<endl;
-                                                                        for (int j=0;j<size_class;j++)
-                                                                        {
-                                                                            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Final;
-                                                                            cout<<endl;
-                                                                        }
-                                                                        getch();
+                                                                        dispMarks(classbme, p, size_class, v);
                                                                     }
                                                                     break;
 
@@ -1211,25 +1105,17 @@ do
                                     break;
                                 case '2':
                                     {
+                                        for (int j=0;j<size_class;j++)
+                                        {
+                                            classbme[p][j].Total =classbme[p][j].Att+classbme[p][j].Q1+classbme[p][j].Q2+classbme[p][j].Mid+classbme[p][j].Final;
+                                        }
+
                                         cout<<"Grading"<<endl<<endl;
                                         cout<<"Student ID    "<<"Student Name  "<<"Att  "<<"Q1  "<<"Q2  "<<"Mid "<<"Final "<<"Total "<<endl<<endl;
                                         for (int j=0;j<size_class;j++)
                                         {
                                             cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Att<<"    "<<classbme[p][j].Q1<<"    "<<classbme[p][j].Q2<<"  "<<classbme[p][j].Mid<<"  "<<classbme[p][j].Final<<"  "<<classbme[p][j].Total;
                                             cout<<endl;
-                                        }
-                                        getch();
-                                    }
-                                    break;
-
-                                case '3':
-                                    {
-                                        cout<<"CALCULATED"<<endl<<endl;
-
-                                        for (int j=0;j<size_class;j++)
-                                        {
-                                            classbme[p][j].Total =classbme[p][j].Att+classbme[p][j].Q1+classbme[p][j].Q2+classbme[p][j].Mid+classbme[p][j].Final;
-
                                         }
                                         getch();
                                     }
@@ -1258,18 +1144,118 @@ do
                 ch5='y';
                 std::fstream of("BMECLASSDATA.txt", std::ios::out);
 
-                        if (of.is_open())
-                        {
-                            writemap(of, classbme);
-                            of.close();
-                        }
+                if (of.is_open())
+                {
+                    writemap(of, classbme);
+                    of.close();
+                }
+
+                //SAVE PASSWORDS
+                fstream savePass;
+                savePass.open("Passwords.txt", ios::out);
+                savePass << pass1<<"\n";
+                savePass << pass2<<"\n";
+                savePass << pass3<<"\n";
+                savePass << pass4<<"\n";
+                savePass << pass5<<"\n";
+                savePass << admpass<<"\n";
+                savePass.close();
+                //SAVE PASSWORDS
+
+                //SUBJECT NAME SAVING
+                fstream saveSubj;
+                saveSubj.open("Subjects.txt", std::ios::out);
+                saveSubj << sub1<<"\n";
+                saveSubj << sub2<<"\n";
+                saveSubj << sub3<<"\n";
+                saveSubj << sub4<<"\n";
+                saveSubj << sub5<<"\n";
+                saveSubj.close();
+                //SUBJECT NAME SAVING
+
+                //SAVE FLAGS
+                fstream saveFlags;
+                saveFlags.open("Flags.txt", ios::out);
+                saveFlags << flagatt0<<"\n";
+                saveFlags << flagatt1<<"\n";
+                saveFlags << flagatt2<<"\n";
+                saveFlags << flagatt3<<"\n";
+                saveFlags << flagatt4<<"\n";
+                saveFlags << flagq10<<"\n";
+                saveFlags << flagq11<<"\n";
+                saveFlags << flagq12<<"\n";
+                saveFlags << flagq13<<"\n";
+                saveFlags << flagq14<<"\n";
+                saveFlags << flagq20<<"\n";
+                saveFlags << flagq21<<"\n";
+                saveFlags << flagq22<<"\n";
+                saveFlags << flagq23<<"\n";
+                saveFlags << flagq24<<"\n";
+                saveFlags << flagm0<<"\n";
+                saveFlags << flagm1<<"\n";
+                saveFlags << flagm2<<"\n";
+                saveFlags << flagm3<<"\n";
+                saveFlags << flagm4<<"\n";
+                saveFlags << flagf0<<"\n";
+                saveFlags << flagf1<<"\n";
+                saveFlags << flagf2<<"\n";
+                saveFlags << flagf3<<"\n";
+                saveFlags << flagf4<<"\n";
+
+                saveFlags << flags_reg<<"\n";
+
+                saveFlags << flag1<<"\n";
+                saveFlags << flag2<<"\n";
+                saveFlags << flag4<<"\n";
+                saveFlags << flag7<<"\n";
+                saveFlags << flag11<<"\n";
+
+                saveFlags.close();
+                //SAVE FLAGS
+
 
                 break;
     }
-
 
 }while (ch5=='N' || ch5=='n'); //ADMINISTOR
 
 
 return 0;
+}
+
+//Display Attendance Marks
+void dispMarks(student classbme[][size_class], int p, int s_class, int v)
+{
+    cout<<"Student ID:   "<<"Student Name: "<<"Marks"<<endl<<endl;
+    for (int j=0;j<s_class;j++)
+    {
+        if (v==1)
+        {
+            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Att;
+            cout<<endl;
+        }
+        else if (v==2)
+        {
+            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Q1;
+            cout<<endl;
+        }
+        else if (v==3)
+        {
+            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Q2;
+            cout<<endl;
+        }
+        else if (v==4)
+        {
+            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Mid;
+            cout<<endl;
+        }
+        else if (v==5)
+        {
+            cout<<classbme[p][j].stu_id<<"        "<<classbme[p][j].name<<"         "<<classbme[p][j].Final;
+            cout<<endl;
+        }
+
+    }
+    getche();
+
 }
