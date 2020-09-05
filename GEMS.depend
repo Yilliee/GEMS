@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1598288736 source:e:\gems\main.cpp
+1599337264 source:e:\gems\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
 	<fstream>
 	<iomanip>
+	<math.h>
 

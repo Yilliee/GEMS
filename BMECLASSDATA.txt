@@ -1,6 +1,305 @@
-2019bme71 Waseem 2 1 1 22 33 8 2019bme72 Kaleem 2 1 1 22 33 8 2019bme73 Saleem 2 1 1 22 33 8 
-2019bme71 Waseem 8 2 2 2 2 16 2019bme72 Kaleem 8 2 2 2 2 16 2019bme73 Saleem 8 2 2 2 2 16 
-2019bme71 Waseem 0 0 0 0 0 0 2019bme72 Kaleem 0 0 0 0 0 0 2019bme73 Saleem 0 0 0 0 0 0 
-2019bme71 Waseem 5 0 0 22 40 67 2019bme72 Kaleem 5 0 0 22 23 50 2019bme73 Saleem 5 0 0 22 33 60 
-2019bme71 Waseem 5 5 5 5 7 7 2019bme72 Kaleem 5 5 5 5 7 7 2019bme73 Saleem 5 5 5 5 7 7 
-2019bme71 Waseem 0 0 0 0 0 0 2019bme72 Kaleem 0 0 0 0 0 0 2019bme73 Saleem 0 0 0 0 0 0 
+2019bme01 Ali Zafar
+3 5 7 2 33 50 D 
+2019bme02 Javaid Rana
+4 6 8 22 32 72 B- 
+2019bme03 Zaima Nisar
+6 7 7 23 34 77 B+ 
+2019bme04 Safia Jabbar
+5 5 8 24 36 78 B+ 
+2019bme05 Mamoona Ali
+3 7 7 1 21 39 F 
+2019bme06 Hajra Naeem
+4 7 7 12 26 56 D+ 
+2019bme07 Haleema
+5 8 6 18 27 64 C 
+2019bme08 Basam Afzal
+6 6 6 30 25 73 B 
+2019bme09 Khalid Mahmood
+7 7 5 25 32 76 B 
+2019bme10 Liyaqat
+6 8 9 26 33 82 A- 
+2019bme11 Ghulam Raza
+5 5 9 19 38 76 B 
+2019bme12 Bashir Rana
+4 2 8 18 36 68 C+ 
+2019bme13 Noureen
+3 1 7 22 36 69 C+ 
+2019bme14 Fatima Mustafa
+7 0 3 27 24 61 C- 
+2019bme15 Eiman Ali
+8 7 0 21 40 76 B 
+2019bme16 Usman Naveed
+8 6 1 27 33 75 B 
+2019bme17 Ghulam Murtaza
+8 5 8 16 34 71 B- 
+2019bme18 Faheem Khan
+7 8 8 19 24 66 C+ 
+2019bme19 Jameel Ahmad
+6 9 7 10 26 58 C- 
+2019bme20 Saleem Khan
+5 8 6 27 16 62 C 
+2019bme21 Waseem Abbas
+5 5 5 29 19 63 C 
+2019bme22 Moeen Ali
+6 3 4 3 33 49 F 
+2019bme23 Dawood Ali
+5 9 7 23 23 67 C+ 
+2019bme24 Kulsoom Rana
+7 8 8 22 24 69 C+ 
+2019bme25 Fatima Sultam
+8 9 7 28 34 86 A+ 
+2019bme26 Somia Waseem
+9 8 8 28 33 86 A+ 
+2019bme27 Mahrukh
+8 3 7 26 22 66 C+ 
+2019bme28 Uon Ali
+9 4 5 25 25 68 C+ 
+2019bme29 Bashir Ali
+8 7 4 12 11 42 F 
+2019bme30 Safdar Qayum
+5 6 9 27 17 64 C 
+
+2019bme01 Ali Zafar
+4 6 6 11 22 49 F 
+2019bme02 Javaid Rana
+7 7 7 16 27 64 C- 
+2019bme03 Zaima Nisar
+8 8 7 22 30 75 B- 
+2019bme04 Safia Jabbar
+6 8 7 25 33 79 B+ 
+2019bme05 Mamoona Ali
+7 8 2 27 34 78 B 
+2019bme06 Hajra Naeem
+8 9 3 28 29 77 B 
+2019bme07 Haleema
+8 7 7 29 11 62 D+ 
+2019bme08 Basam Afzal
+7 9 2 30 25 73 C+ 
+2019bme09 Khalid Mahmood
+6 5 8 28 35 82 B+ 
+2019bme10 Liyaqat
+5 4 7 25 37 78 B 
+2019bme11 Ghulam Raza
+4 6 9 21 22 62 D+ 
+2019bme12 Bashir Rana
+3 8 8 20 32 71 C+ 
+2019bme13 Noureen
+4 7 6 18 36 71 C+ 
+2019bme14 Fatima Mustafa
+5 7 7 19 21 59 D 
+2019bme15 Eiman Ali
+8 2 9 11 22 52 F 
+2019bme16 Usman Naveed
+9 1 8 24 11 53 F 
+2019bme17 Ghulam Murtaza
+8 7 5 29 30 79 B+ 
+2019bme18 Faheem Khan
+4 7 7 21 39 78 B 
+2019bme19 Jameel Ahmad
+7 6 5 11 38 67 C 
+2019bme20 Saleem Khan
+8 8 5 25 31 77 B 
+2019bme21 Waseem Abbas
+9 5 5 22 32 73 C+ 
+2019bme22 Moeen Ali
+8 6 6 29 37 86 A+ 
+2019bme23 Dawood Ali
+6 7 7 22 32 74 B- 
+2019bme24 Kulsoom Rana
+5 6 8 19 38 76 B 
+2019bme25 Fatima Sultam
+4 5 4 18 28 59 D 
+2019bme26 Somia Waseem
+3 8 7 22 26 66 C- 
+2019bme27 Mahrukh
+7 9 4 28 25 73 C+ 
+2019bme28 Uon Ali
+7 8 7 30 29 81 B+ 
+2019bme29 Bashir Ali
+8 7 6 22 30 73 C+ 
+2019bme30 Safdar Qayum
+8 8 6 21 40 83 A- 
+
+2019bme01 Ali Zafar
+6 6 5 20 33 70 C+ 
+2019bme02 Javaid Rana
+7 7 7 29 34 84 A+ 
+2019bme03 Zaima Nisar
+9 6 8 2 37 62 D+ 
+2019bme04 Safia Jabbar
+8 5 8 21 32 74 B- 
+2019bme05 Mamoona Ali
+7 6 8 24 23 68 C+ 
+2019bme06 Hajra Naeem
+8 8 7 13 24 60 D+ 
+2019bme07 Haleema
+6 9 5 16 39 75 B 
+2019bme08 Basam Afzal
+7 1 5 26 31 70 C+ 
+2019bme09 Khalid Mahmood
+8 9 6 28 21 72 C+ 
+2019bme10 Liyaqat
+9 1 7 30 22 69 C+ 
+2019bme11 Ghulam Raza
+8 1 5 20 26 60 D+ 
+2019bme12 Bashir Rana
+3 2 7 26 28 66 C 
+2019bme13 Noureen
+1 5 5 25 29 65 C- 
+2019bme14 Fatima Mustafa
+7 6 8 19 32 72 C+ 
+2019bme15 Eiman Ali
+8 7 6 18 34 73 B- 
+2019bme16 Usman Naveed
+4 8 4 24 32 72 C+ 
+2019bme17 Ghulam Murtaza
+5 6 2 29 33 75 B 
+2019bme18 Faheem Khan
+8 5 9 28 28 78 B+ 
+2019bme19 Jameel Ahmad
+7 8 8 22 29 74 B- 
+2019bme20 Saleem Khan
+8 7 10 21 31 77 B 
+2019bme21 Waseem Abbas
+9 5 4 17 22 57 D 
+2019bme22 Moeen Ali
+10 8 5 15 3 41 F 
+2019bme23 Dawood Ali
+4 9 6 30 40 89 A+ 
+2019bme24 Kulsoom Rana
+5 7 7 20 22 61 D+ 
+2019bme25 Fatima Sultam
+6 6 3 29 22 66 C 
+2019bme26 Somia Waseem
+9 3 7 21 33 73 B- 
+2019bme27 Mahrukh
+2 8 8 28 30 76 B 
+2019bme28 Uon Ali
+8 9 7 22 36 82 A- 
+2019bme29 Bashir Ali
+9 2 6 21 35 73 B- 
+2019bme30 Safdar Qayum
+6 7 7 20 31 71 C+ 
+
+2019bme01 Ali Zafar
+9 7 6 2 20 44 F 
+2019bme02 Javaid Rana
+10 7 7 20 23 67 C- 
+2019bme03 Zaima Nisar
+10 7 7 12 30 66 C- 
+2019bme04 Safia Jabbar
+3 8 8 15 40 74 C+ 
+2019bme05 Mamoona Ali
+7 8 7 16 39 77 B 
+2019bme06 Hajra Naeem
+8 6 6 11 33 64 C- 
+2019bme07 Haleema
+6 5 8 20 37 76 B- 
+2019bme08 Basam Afzal
+9 4 9 24 32 78 B 
+2019bme09 Khalid Mahmood
+6 5 8 19 31 69 C 
+2019bme10 Liyaqat
+7 6 7 17 26 63 D+ 
+2019bme11 Ghulam Raza
+7 4 8 15 28 62 D+ 
+2019bme12 Bashir Rana
+8 6 9 21 39 83 A- 
+2019bme13 Noureen
+9 7 8 20 40 84 A- 
+2019bme14 Fatima Mustafa
+4 8 7 22 31 72 C+ 
+2019bme15 Eiman Ali
+8 7 8 21 32 76 B- 
+2019bme16 Usman Naveed
+2 6 9 25 35 77 B 
+2019bme17 Ghulam Murtaza
+7 7 6 28 40 88 A+ 
+2019bme18 Faheem Khan
+8 8 9 15 22 62 D+ 
+2019bme19 Jameel Ahmad
+6 9 5 16 21 57 F 
+2019bme20 Saleem Khan
+5 10 8 20 25 68 C 
+2019bme21 Waseem Abbas
+6 9 9 28 27 79 B 
+2019bme22 Moeen Ali
+7 8 7 21 29 72 C+ 
+2019bme23 Dawood Ali
+8 9 8 22 21 68 C 
+2019bme24 Kulsoom Rana
+7 10 9 27 33 86 A+ 
+2019bme25 Fatima Sultam
+6 6 8 26 37 83 A- 
+2019bme26 Somia Waseem
+9 5 8 21 38 81 B+ 
+2019bme27 Mahrukh
+8 6 9 13 31 67 C- 
+2019bme28 Uon Ali
+7 8 7 14 32 68 C 
+2019bme29 Bashir Ali
+6 8 6 17 32 69 C 
+2019bme30 Safdar Qayum
+6 7 5 19 34 71 C+ 
+
+2019bme01 Ali Zafar
+6 6 6 22 33 73 C+ 
+2019bme02 Javaid Rana
+5 7 6 21 32 71 C+ 
+2019bme03 Zaima Nisar
+6 6 7 23 34 76 B- 
+2019bme04 Safia Jabbar
+7 8 6 24 36 81 B+ 
+2019bme05 Mamoona Ali
+9 8 9 29 37 92 A+ 
+2019bme06 Hajra Naeem
+5 8 7 28 38 86 A- 
+2019bme07 Haleema
+6 7 7 2 32 54 F 
+2019bme08 Basam Afzal
+7 7 6 23 33 76 B- 
+2019bme09 Khalid Mahmood
+8 6 7 24 39 84 B+ 
+2019bme10 Liyaqat
+9 6 6 21 40 82 B+ 
+2019bme11 Ghulam Raza
+10 9 5 12 17 53 F 
+2019bme12 Bashir Rana
+2 4 6 17 18 47 F 
+2019bme13 Noureen
+6 6 7 18 33 70 C 
+2019bme14 Fatima Mustafa
+7 5 6 19 40 77 B- 
+2019bme15 Eiman Ali
+3 8 8 21 32 72 C+ 
+2019bme16 Usman Naveed
+8 7 9 23 35 82 B+ 
+2019bme17 Ghulam Murtaza
+9 9 4 23 37 82 B+ 
+2019bme18 Faheem Khan
+9 6 5 22 38 80 B 
+2019bme19 Jameel Ahmad
+8 8 6 21 28 71 C+ 
+2019bme20 Saleem Khan
+7 2 7 21 29 66 C- 
+2019bme21 Waseem Abbas
+6 3 6 29 21 65 C- 
+2019bme22 Moeen Ali
+8 7 5 28 22 70 C 
+2019bme23 Dawood Ali
+7 7 8 27 23 72 C+ 
+2019bme24 Kulsoom Rana
+9 9 7 30 12 67 C- 
+2019bme25 Fatima Sultam
+7 7 6 22 19 61 D+ 
+2019bme26 Somia Waseem
+8 8 7 21 40 84 B+ 
+2019bme27 Mahrukh
+5 5 7 24 30 71 C+ 
+2019bme28 Uon Ali
+7 5 8 26 23 69 C 
+2019bme29 Bashir Ali
+8 7 8 21 25 69 C 
+2019bme30 Safdar Qayum
+7 6 9 22 28 72 C+ 
+
