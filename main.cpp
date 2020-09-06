@@ -470,7 +470,7 @@ do
                                             {
 
                                                 system("cls");
-                                                cout<<endl<<endl<<"       S T U D E N T D   W I S E   G R A D E   S U M M A R Y";
+                                                cout<<endl<<endl<<"       S T U D E N T    W I S E   G R A D E   S U M M A R Y";
 
                                                 cout<<endl<<endl<<endl<<endl<<"S#  "<<setw(12)<<left<<"Student ID"<<setw(25)<<left<<"Student Name"
                                                 <<setw(7)<<left<<"PF"<<setw(5)<<left<<"CA"<<setw(7)<<left<<"A.Phy"<<setw(9)<<left<<"Physio"<<setw(7)<<left<<"CAL"<<endl<<endl;
@@ -491,13 +491,13 @@ do
                                                 int flag=0;
                                                 string studentID;
                                                 system("cls");
-                                                cout<<endl<<endl<<"       S T U D E N T D   R E S U L T   S U M M A R Y";
+                                                cout<<endl<<endl<<"       S T U D E N T    R E S U L T   S U M M A R Y";
 
                                                 cout<<endl<<endl<<"Enter Student ID: ";
                                                 cin>>studentID;
 
                                                 system("cls");
-                                                cout<<endl<<endl<<"       S T U D E N T D   R E S U L T   S U M M A R Y";
+                                                cout<<endl<<endl<<"       S T U D E N T    R E S U L T   S U M M A R Y";
 
                                                 for ( int j=0; j<size_class; j++)
                                                 {
