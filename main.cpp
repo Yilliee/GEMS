@@ -54,6 +54,7 @@ int main()
 
     int flag1=0, flag2=0, flag4=0, flag7=0, flag11=0, p;
     int flags_reg=0;
+    int flag_reg_stu =0;
     //FLAGS
 
 
@@ -157,6 +158,7 @@ int main()
     readFlags >> flagf4;
 
     readFlags >> flags_reg;
+    readFlags >> flag_reg_stu;
 
     readFlags >> flag1;
     readFlags >> flag2;
@@ -216,8 +218,11 @@ do
                     {
                         case '1':
                             {
+                                char ch20;
+                                if ( flag_reg_stu ==0 )
+                                {
                                 cout<<endl<<endl<<"    STUDENT REGISTRATION"<<endl<<endl;
-                                cout<<"Sample Student ID (e.g., 2019bme51)"<<endl<<endl;
+                                cout<<"Sample Student ID (e.g., 2019bme09)"<<endl<<endl;
 
                                 for (int j=0; j<size_class; j++)
                                 {
@@ -259,6 +264,24 @@ do
 
                                     flag1=0; flag2=0; flag4=0; flag7=0; flag11=0;
                                     flags_reg=0;
+
+                                flag_reg_stu = 1;
+                                }
+                                else
+                                {
+                                    cout<<endl<<endl<<"Students Already registered ";
+                                    cout<<endl<<endl<<"Do You want to Register Again(Y/N)? ";
+                                    cin>>ch20;
+                                    if(ch20=='Y' || ch20=='y')
+                                    {
+                                        flag_reg_stu = 0;
+                                        cout<<endl<<endl<<"Now you can Register the Students again. Repeat the process again";
+                                        getch();
+                                    }
+
+
+                                }
+
 
                             }
                             break;
@@ -345,9 +368,10 @@ do
                                     {
                                         flags_reg=0;
                                         cout<<endl<<endl<<"Now you can Register the subjects again. Repeat the process again";
+                                        getch();
                                     }
 
-                                    //getch();
+
                                 }
 
                             }
@@ -1569,6 +1593,7 @@ do
                 saveFlags << flagf4<<"\n";
 
                 saveFlags << flags_reg<<"\n";
+                saveFlags << flag_reg_stu<<"\n";
 
                 saveFlags << flag1<<"\n";
                 saveFlags << flag2<<"\n";

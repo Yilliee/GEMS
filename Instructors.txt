@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 Miss Anam Iftikhar
 Miss Iqra Farhat
 Miss Umm-e-Kalsoom
 Dr. Shaima Farooqi
 Miss Saba Naz Butt
-=======
-AMJAD ALI
-DR ZAFAR
-DR WASEEMA
-DR. SHAIMA
-SALEEM KHAN
->>>>>>> cfea2ef5ed60b154ff14aa2e9dbd5c2ba646d35c
